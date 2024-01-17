@@ -1,5 +1,5 @@
 # Simple-JWT
-A simple script to generate and validate JWT tokens.
+A simple and portable script to generate and validate JWT tokens.
 
 How to use:
 ```php
@@ -52,3 +52,9 @@ Array
 "payload" is the payload added to the token when it was generated.
 
 If for example, we have a JWT token which was improperly modified, then "valid" and "authorized" will result in negative ("code" 2), if our JWT token was never modified but has nevertheless expired, then "valid" and " expired" will be positive but "authorized" will be negative ("code" 3), if, on the other hand, the token is completely original and has not expired then "valid" and "authorized" will be positive while "expired" will be negative ( "code" 1).
+
+> [!NOTE]
+> It is a very simple way to generate and validate a JWT token in PHP, there are other more advanced tools for more complex projects.
+
+> [!IMPORTANT]
+> The algorithm used is SHA 256
