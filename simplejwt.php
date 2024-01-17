@@ -1,6 +1,6 @@
 <?php
 //Example
-$jwt_key=jwt_key();
+$jwt_key=jwt_generateKey();
 
 $jwt=generateJWT(array("user_id"=>3),3600);
 
@@ -65,7 +65,7 @@ return rtrim(strtr(base64_encode($s),'+/','-_'),'=');
 function jwt_btoa($s){
 return base64_decode(strtr($s,'_-','/+'));
 }
-function jwt_key() {
+function jwt_generateKey() {
 $c='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_/?0123456789';
 $r='';
 for($i=0;$i<43;$i++){
