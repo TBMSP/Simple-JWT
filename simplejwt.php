@@ -1,4 +1,8 @@
 <?php
+/*
+CREADO POR MATÍAS GUTIERREZ
+2024
+*/
 //Example
 $jwt_key=jwt_generateKey();
 
