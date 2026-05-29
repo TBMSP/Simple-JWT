@@ -32,6 +32,7 @@ $r=array("authorized"=>false,"valid"=>false,"expired"=>false,"code"=>0,"payload"
 $c=explode('.',$jwt);
 $e=false;
 if($jwt==""||count($c)!=3){$e=true;}
+if(!$e){
 try{
 list($header,$payload,$signature)=explode('.',$jwt);
 $decodedPayload=jwt_btoa($payload);
@@ -55,6 +56,7 @@ $r["code"]=2;
 $r["expired"]=false;
 }
 }catch(Exception $ex){$e=true;}
+}
 if($e){
 $r["code"]=4;
 $r["expired"]=false;
